@@ -1,0 +1,19 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  /* content */
+  --content-primary:  #FFFFFF;
+  --content-secondary: #98959D;
+  --content-tertiary: #666666;
+  --content-brand: #9282FA;
+
+  --background-tertiary: #23242C;
+
+}
+
+body{
+  background-color: var(--background-tertiary);
+}
