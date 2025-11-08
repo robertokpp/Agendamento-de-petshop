@@ -1,0 +1,20 @@
+aside {
+  width: 45rem;
+  margin: auto;
+  & header {
+    display: flex;
+  }
+
+  & .period {
+    & header {
+      display: flex;
+      justify-content: space-between;
+    }
+    & ul{
+      li{
+        display: flex;
+       justify-content: space-between;
+      }
+    }
+  }
+}

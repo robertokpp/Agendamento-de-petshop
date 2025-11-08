@@ -9,30 +9,117 @@
   <body>
     <aside>
       <header>
-        <h1>Sua agenda</h1>
-        <p>
-          Aqui você pode ver todos os clientes e serviços agendados para hoje.
-        </p>
+        <div>
+          <h1>Sua agenda</h1>
+          <p>
+            Aqui você pode ver todos os clientes e serviços agendados para hoje.
+          </p>
+        </div>
         <input type="date" name="date" id="date" />
       </header>
 
-      <div class="period">
-        <div>
-          <h2>
-            <img src="assets/icons/Sun-Fog--Streamline-Solar.svg" alt="" />
+      <section class="period">
+        <header>
+          <strong>
+            <img
+              src="assets/icons/Sun-Fog--Streamline-Solar.svg"
+              alt="Ícone do sol representando a manhã"
+            />
             Manhã
-          </h2>
+          </strong>
           <span>09h-12h</span>
-        </div>
+        </header>
 
-        <ul class="period-morning"></ul>
-      </div>
-      <div class="period">
-        <ul class="period-afternoon"></ul>
-      </div>
-      <div class="period">
-        <ul class="period-night"></ul>
-      </div>
+        <ul class="period-morning">
+          <li>
+            <time datetime="09:00">09:00</time>
+            <div>
+              <span class="pet-name">thor</span>
+              <span>/</span>
+              <span class="cliente-name">Fernando Costa</span>
+            </div>
+            <span class="service"> Vacinação </span>
+            <button class="remove-btn">Remover agendamento</button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="period">
+        <header>
+          <strong>
+            <img src="assets/icons/Cloud-Sun-4--Streamline-Solar.svg" alt="" />
+            Tarde
+          </strong>
+          <span>13h-18h</span>
+        </header>
+
+        <ul class="period-afternoon">
+          <li>
+            <time datetime="09:00">09:00</time>
+            <div>
+              <span class="pet-name">thor</span>
+              <span>/</span>
+              <span class="cliente-name">Fernando Costa</span>
+            </div>
+            <span class="service"> Vacinação </span>
+            <button class="remove-btn">Remover agendamento</button>
+          </li>
+
+          <li>
+            <time datetime="09:00">09:00</time>
+            <div>
+              <span class="pet-name">thor</span>
+              <span>/</span>
+              <span class="cliente-name">Fernando Costa</span>
+            </div>
+            <span class="service"> Vacinação </span>
+            <button class="remove-btn">Remover agendamento</button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="period">
+        <header>
+          <strong>
+            <img src="assets/icons/Moon-Stars--Streamline-Solar.svg" alt="" />
+            Noite
+          </strong>
+          <span>09h-12h</span>
+        </header>
+
+        <ul class="period-night">
+          <li>
+            <time datetime="09:00">09:00</time>
+            <div>
+              <span class="pet-name">thor</span>
+              <span>/</span>
+              <span class="cliente-name">Fernando Costa</span>
+            </div>
+            <span class="service"> Vacinação </span>
+            <button class="remove-btn">Remover agendamento</button>
+          </li>
+          <li>
+            <time datetime="09:00">09:00</time>
+            <div>
+              <span class="pet-name">thor</span>
+              <span>/</span>
+              <span class="cliente-name">Fernando Costa</span>
+            </div>
+            <span class="service"> Vacinação </span>
+            <button class="remove-btn">Remover agendamento</button>
+          </li>
+          <li>
+            <time datetime="09:00">09:00</time>
+            <div>
+              <span class="pet-name">thor</span>
+              <span>/</span>
+              <span class="cliente-name">Fernando Costa</span>
+            </div>
+            <span class="service"> Vacinação </span>
+            <button class="remove-btn">Remover agendamento</button>
+          </li>
+        </ul>
+      </section>
     </aside>
   </body>
 </html>
