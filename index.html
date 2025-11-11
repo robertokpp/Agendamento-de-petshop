@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="src/styles/index.css" />
     <title>Mundo Pet</title>
   </head>
   <body>
+    <div class="logo">
+      <img src="src/assets/logo.svg" alt="" />
+    </div>
+
     <aside>
       <header>
         <div>
@@ -22,7 +26,7 @@
         <header>
           <strong>
             <img
-              src="assets/icons/Sun-Fog--Streamline-Solar.svg"
+              src="src/assets/icons/Sun-Fog--Streamline-Solar.svg"
               alt="Ícone do sol representando a manhã"
             />
             Manhã
@@ -36,10 +40,10 @@
             <div>
               <span class="pet-name">thor</span>
               <span>/</span>
-              <span class="cliente-name">Fernando Costa</span>
+              <span class="client-name">Fernando Costa</span>
             </div>
             <span class="service"> Vacinação </span>
-            <button class="remove-btn">Remover agendamento</button>
+            <button class="btn-remove">Remover agendamento</button>
           </li>
         </ul>
       </section>
@@ -47,7 +51,10 @@
       <section class="period">
         <header>
           <strong>
-            <img src="assets/icons/Cloud-Sun-4--Streamline-Solar.svg" alt="" />
+            <img
+              src="src/assets/icons/Cloud-Sun-4--Streamline-Solar.svg"
+              alt=""
+            />
             Tarde
           </strong>
           <span>13h-18h</span>
@@ -62,7 +69,7 @@
               <span class="cliente-name">Fernando Costa</span>
             </div>
             <span class="service"> Vacinação </span>
-            <button class="remove-btn">Remover agendamento</button>
+            <button class="btn-remove">Remover agendamento</button>
           </li>
 
           <li>
@@ -73,7 +80,7 @@
               <span class="cliente-name">Fernando Costa</span>
             </div>
             <span class="service"> Vacinação </span>
-            <button class="remove-btn">Remover agendamento</button>
+            <button class="btn-remove">Remover agendamento</button>
           </li>
         </ul>
       </section>
@@ -81,7 +88,10 @@
       <section class="period">
         <header>
           <strong>
-            <img src="assets/icons/Moon-Stars--Streamline-Solar.svg" alt="" />
+            <img
+              src="src/assets/icons/Moon-Stars--Streamline-Solar.svg"
+              alt=""
+            />
             Noite
           </strong>
           <span>09h-12h</span>
@@ -96,7 +106,7 @@
               <span class="cliente-name">Fernando Costa</span>
             </div>
             <span class="service"> Vacinação </span>
-            <button class="remove-btn">Remover agendamento</button>
+            <button class="btn-remove">Remover agendamento</button>
           </li>
           <li>
             <time datetime="09:00">09:00</time>
@@ -106,7 +116,7 @@
               <span class="cliente-name">Fernando Costa</span>
             </div>
             <span class="service"> Vacinação </span>
-            <button class="remove-btn">Remover agendamento</button>
+            <button class="btn-remove">Remover agendamento</button>
           </li>
           <li>
             <time datetime="09:00">09:00</time>
@@ -116,10 +126,84 @@
               <span class="cliente-name">Fernando Costa</span>
             </div>
             <span class="service"> Vacinação </span>
-            <button class="remove-btn">Remover agendamento</button>
+            <button class="btn-remove">Remover agendamento</button>
           </li>
         </ul>
       </section>
+
+
+      <div class="btn-new">
+        <button id="btn-ns">Novo agendamento</button>
+      </div>
     </aside>
+
+    <dialog>
+      <form action="" method="dialog">
+        <header>
+          <legend>Agende um atendimento</legend>
+          <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </header>
+
+        <div>
+          <label for="tutors-name">Nome do tutor</label>
+          <div class="input-wrapper">
+            <img
+              class="icons"
+              src="src/assets/icons/User--Streamline-Solar.svg"
+              alt=""
+            />
+            <input type="text" name="Tutors-name" id="Tutors-name" />
+          </div>
+        </div>
+
+        <div>
+          <label for="pet-name-forn">Nome do pet</label>
+          <div class="input-wrapper">
+            <img
+              class="icons"
+              src="src/assets/icons/Pet-Paw--Streamline-Core.svg"
+              alt=""
+            />
+            <input type="text" name="pet-name-forn" id="pet-name-forn" />
+          </div>
+        </div>
+
+
+        <div>
+          <label for="Tel">Telefone</label>
+          <div class="input-wrapper">
+            <img
+              class="icons"
+              src="src/assets/icons/Phone--Streamline-Solar.svg"
+              alt=""
+            />
+            <input type="tel" name="tel" id="tel" />
+          </div>
+        </div>
+
+        <div>
+          <label for="dec-service">Descrição do serviço</label>
+          <div class="">
+            <textarea name="dec-service" id="dec-service"  rows="5"></textarea>
+          </div>
+        </div>
+
+        <div class="date-hour">
+          <div>
+            <label for="date">Data</label>
+            <input type="date" name="date" id="date" />
+          </div>
+
+          <div>
+            <label for="hour">Hora</label>
+            <input type="time" name="hour" id="hour" />
+          </div>
+        </div>
+
+        <button type="submit">Agendar</button>
+      </form>
+    </dialog>
+
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>
