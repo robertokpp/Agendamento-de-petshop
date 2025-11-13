@@ -12,7 +12,17 @@ form {
   & .date-hour {
     display: flex;
     flex-direction: row;
+    gap: 1rem;
+    & div{
+      width: 50%;
+    }
   }
+  
+  & .btn-new{
+    width: 50%;
+    margin-left: 50%;
+  }
+
 }
 
 .input-wrapper {
