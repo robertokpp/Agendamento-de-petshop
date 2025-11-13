@@ -7,6 +7,9 @@ import "../src/utils/dialog.js";
 import "../src/module/form.js";
 import "../src/module/schedule.js";
 
+
+
+
 //CSS
 import "./styles/aside.css";
 import "./styles/dialog.css";
