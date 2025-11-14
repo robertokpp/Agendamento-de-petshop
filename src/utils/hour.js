@@ -1,12 +1,4 @@
-export function hourSelect(selectId, callback = null) {
-  if (!selectId) {
-    console.warn(`Elemento ${selectId} nao encontrada`);
-    return;
-  }
-
-  selectId.innerHTML = "";
-
-  const sheduleHour = [
+  export const sheduleHour = [
     "09:00",
     "10:00",
     "11:00",
@@ -23,10 +15,3 @@ export function hourSelect(selectId, callback = null) {
     "22:00",
   ];
 
-  sheduleHour.forEach((h) => {
-    const option = document.createElement("option");
-    option.value = h;
-    option.textContent = h;
-    selectId.appendChild(option);
-  });
-}

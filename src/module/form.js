@@ -1,6 +1,6 @@
 import { phoneValidator } from "../utils/phone-validator.js";
 import dayjs from "dayjs";
-import { hourSelect } from "../utils/hour.js";
+import { sheduleHour } from "../utils/hour.js";
 
 const form = document.querySelector("form");
 const submit = document.getElementById("btn-submit");
@@ -11,11 +11,23 @@ const formDate = document.getElementById("form-date");
 const formHour = document.getElementById("form-hour");
 const formService = document.getElementById("dec-service");
 
-// ativar o validor de numero
+// validor de numero
 phoneValidator(tel);
-formDate.value = dayjs().format("YYYY-MM-DD");
-  
-hourSelect(formHour)
+
+//Receber a data do dia e bloqueia as anterios
+const today = dayjs().format("YYYY-MM-DD");
+formDate.value = today;
+formDate.min = today;
+
+
+//Criar o input seletor de horas
+sheduleHour.forEach((h) => {
+  const option = document.createElement("option");
+  option.value = h;
+  option.textContent = h;
+  formHour.appendChild(option);
+});
+
 
 
 form.onsubmit = (event) => {

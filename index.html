@@ -18,7 +18,13 @@
             Aqui você pode ver todos os clientes e serviços agendados para hoje.
           </p>
         </div>
-        <input type="date" name="date" id="date" />
+        <div class="input-wrapper">
+          <img
+            src="src/assets/icons/Calendar-Minimalistic--Streamline-Solar.svg"
+            alt=""
+          />
+          <input type="date" name="date" id="date" />
+        </div>
       </header>
 
       <section class="period">
@@ -130,7 +136,6 @@
         </ul>
       </section>
 
-
       <div class="btn-new">
         <button id="btn-ns" class="btn-ns">Novo agendamento</button>
       </div>
@@ -167,7 +172,6 @@
           </div>
         </div>
 
-
         <div>
           <label for="Tel">Telefone</label>
           <div class="input-wrapper">
@@ -183,7 +187,7 @@
         <div>
           <label for="dec-service">Descrição do serviço</label>
           <div class="input-wrapper">
-            <textarea name="dec-service" id="dec-service"  rows="5"></textarea>
+            <textarea name="dec-service" id="dec-service" rows="5"></textarea>
           </div>
         </div>
 
@@ -191,27 +195,39 @@
           <div>
             <label for="form-date">Data</label>
             <div class="input-wrapper">
-              <img src="src/assets/icons/Calendar-Minimalistic--Streamline-Solar.svg" alt="">
+              <img
+                src="src/assets/icons/Calendar-Minimalistic--Streamline-Solar.svg"
+                alt=""
+              />
               <input type="date" name="form-date" id="form-date" />
             </div>
-
           </div>
 
           <div>
             <label for="form-hour">Hora</label>
             <div class="input-wrapper">
-              <img src="src/assets/icons/Clock-Circle--Streamline-Solar.svg" alt="">
+              <img
+                src="src/assets/icons/Clock-Circle--Streamline-Solar.svg"
+                alt=""
+              />
               <select name="form-hour" id="form-hour"></select>
-              <!-- <input type="select" name="form-hour" id="form-hour" /> -->
             </div>
           </div>
         </div>
+
         <div class="btn-new">
-          <button class="btn-ns"  form="form-schedule" id="btn-submit" type="submit">Agendar</button>
+          <button
+            class="btn-ns"
+            form="form-schedule"
+            id="btn-submit"
+            type="submit"
+          >
+            Agendar
+          </button>
         </div>
+
+        
       </form>
     </dialog>
-
-    
   </body>
 </html>
