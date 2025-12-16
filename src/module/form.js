@@ -1,9 +1,13 @@
 import { phoneValidator } from "../utils/phone-validator.js";
 import dayjs from "dayjs";
+<<<<<<< HEAD
 import { sheduleHour } from "../utils/hour.js";
+=======
+import { hourSelect } from "../utils/hour.js";
+import { scheduleNew } from "../services/schedule-new.js";
+>>>>>>> ef55493e3c9ab5fa727a29fff9877ae9fb560b77
 
 const form = document.querySelector("form");
-const submit = document.getElementById("btn-submit");
 const tutorsName = document.getElementById("tutors-name");
 const petName = document.getElementById("pet-name-forn");
 const tel = document.getElementById("tel");
@@ -11,6 +15,7 @@ const formDate = document.getElementById("form-date");
 const formHour = document.getElementById("form-hour");
 const formService = document.getElementById("dec-service");
 
+<<<<<<< HEAD
 // validor de numero
 phoneValidator(tel);
 
@@ -28,36 +33,41 @@ sheduleHour.forEach((h) => {
   formHour.appendChild(option);
 });
 
+=======
+const todayDate = dayjs(new Date()).format("YYYY-MM-DD");
 
+formDate.value = todayDate;
+formDate.min = todayDate;
 
-form.onsubmit = (event) => {
+// ativar o validor de numero
+phoneValidator(tel);
+hourSelect(formHour);
+>>>>>>> ef55493e3c9ab5fa727a29fff9877ae9fb560b77
+
+form.onsubmit = async (event) => {
   event.preventDefault();
-
   try {
-    //Recuperando nome do tutor
+    const id = new Date().getTime();
     const name = tutorsName.value.trim();
-    if (!name) {
-      return alert("Insira o nome do tutor!");
-    }
-
     const pet = petName.value.trim();
-    if (!pet) {
-      return alert("Insira o nome do pet!");
-    }
-
+    const telSchedule = tel.value;
     const descService = formService.value.trim();
-    if (!descService) {
-      return alert("Insira o servico que deseja !!");
+    const dateSchedule = formDate.value;
+    const hourSchudule = formHour.value;
+
+    if (!name || !pet || !descService) {
+      return alert("Existe campos em brancos");
     }
 
-    console.log(
+    await scheduleNew({
+      id,
       name,
       pet,
-      tel.value,
+      telSchedule,
       descService,
-      formDate.value,
-      formHour.value
-    );
+      dateSchedule,
+      hourSchudule,
+    });
   } catch (error) {
     console.log(error);
     alert("Nao foi possivel realizar o agendamento");
